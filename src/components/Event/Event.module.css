@@ -1,0 +1,26 @@
+.profile {
+  width: fit-content;
+  background-color: rgba(179, 154, 237, 0.796);
+  padding: 25px;
+  border: solid 1px black;
+  border-radius: 10px;
+  margin: auto;
+}
+
+.description {
+  text-align: center;
+}
+.name {
+  font-weight: 700;
+  font-size: 20px;
+}
+.tag {
+}
+.location {
+}
+.stats {
+}
+.label {
+}
+.quantity {
+}
