@@ -1,10 +1,13 @@
-import { EventBoard } from "components/EventBoard/EventBoard";
+import friends from "../friends.json";
+import { UserBoard } from "components/UserBoard/UserBoard";
 import user from "../user.json";
+import { FriendsBoard } from "components/FriendsBoard/FriendsBoard";
 
 export const App = () => {
   return (
     <div>
-      <EventBoard event={user} />
+      <FriendsBoard events={friends} />
+      <UserBoard event={user} />
     </div>
   );
 };

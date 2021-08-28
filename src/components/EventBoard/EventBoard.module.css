@@ -1,9 +1,0 @@
-.eventBoard {
-  /* display: grid; */
-  /* grid-template-columns: repeat(auto-fit, minmax(240px, auto)); */
-  /* gap: 24px; */
-  /* padding-left: 16px;
-  padding-right: 16px; */
-  padding: 100px;
-  background-color: rgba(242, 100, 230, 0.638);
-}

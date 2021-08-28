@@ -1,0 +1,8 @@
+.friendsBoard {
+  background-color: rgba(242, 255, 4, 0.576);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(227px, auto));
+
+  gap: 31px;
+  padding: 20px 40px;
+}

@@ -1,11 +1,12 @@
 import PropTypes from "prop-types";
-import { Event } from "components/Event/Event";
-import css from "./EventBoard.module.css";
+import { UserCard } from "components/UserCard/UserCard";
+import css from "./UserBoard.module.css";
 
-export const EventBoard = ({ event }) => {
+// export const UserBoard = ({ event }) => {
+export const UserBoard = ({ event }) => {
   return (
-    <div className={css.eventBoard}>
-      <Event
+    <div className={css.userBoard}>
+      <UserCard
         name={event.name}
         tag={event.tag}
         location={event.location}
@@ -18,7 +19,7 @@ export const EventBoard = ({ event }) => {
   );
 };
 
-EventBoard.propTypes = {
+UserBoard.propTypes = {
   event: PropTypes.exact({
     name: PropTypes.string.isRequired,
     tag: PropTypes.string.isRequired,

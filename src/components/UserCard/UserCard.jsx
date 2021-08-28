@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
-import css from "./Event.module.css";
+import css from "./UserCard.module.css";
 
-export const Event = ({
+export const UserCard = ({
   name,
   tag,
   location,
@@ -37,7 +37,7 @@ export const Event = ({
   );
 };
 
-Event.propTypes = {
+UserCard.propTypes = {
   name: PropTypes.string.isRequired,
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
