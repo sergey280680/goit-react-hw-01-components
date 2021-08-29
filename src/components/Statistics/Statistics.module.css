@@ -2,12 +2,11 @@
   background-color: rgb(204, 131, 211);
   width: fit-content;
   margin: 20px auto;
-  padding-top: 5px;
 }
 
 .title {
   text-align: center;
-  margin: 10px 0;
+  line-height: 60px;
 }
 .stat_list {
   display: flex;
