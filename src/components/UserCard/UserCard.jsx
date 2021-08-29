@@ -1,5 +1,14 @@
 import PropTypes from "prop-types";
-import css from "./UserCard.module.css";
+import {
+  CardProfile,
+  Description,
+  Name,
+  Tag,
+  Location,
+  StatusList,
+  StatusItem,
+  Label,
+} from "./UserCard.styled";
 
 export const UserCard = ({
   name,
@@ -11,29 +20,29 @@ export const UserCard = ({
   likes,
 }) => {
   return (
-    <div className={css.profile}>
-      <div className={css.description}>
-        <img src={avatar} alt="Аватар пользователя" className={css.avatar} />
-        <p className={css.name}>{name}</p>
-        <p className={css.tag}>@{tag}</p>
-        <p className={css.location}>{location}</p>
-      </div>
+    <CardProfile>
+      <Description>
+        <img src={avatar} alt="Аватар пользователя" />
+        <Name>{name}</Name>
+        <Tag>@{tag}</Tag>
+        <Location>{location}</Location>
+      </Description>
 
-      <ul className={css.stats}>
-        <li>
-          <span className={css.label}>Follwers</span>
-          <span className={css.quantity}>{followers}</span>
-        </li>
-        <li>
-          <span className={css.label}>View</span>
-          <span className={css.quantity}>{views}</span>
-        </li>
-        <li>
-          <span className={css.label}>Like</span>
-          <span className={css.quantity}>{likes}</span>
-        </li>
-      </ul>
-    </div>
+      <StatusList>
+        <StatusItem>
+          <Label>Follwers</Label>
+          <span>{followers}</span>
+        </StatusItem>
+        <StatusItem>
+          <Label>View</Label>
+          <span>{views}</span>
+        </StatusItem>
+        <StatusItem>
+          <Label>Like</Label>
+          <span>{likes}</span>
+        </StatusItem>
+      </StatusList>
+    </CardProfile>
   );
 };
 

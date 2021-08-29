@@ -1,10 +1,10 @@
 //
 import PropTypes from "prop-types";
-import css from "./Transactions.module.css";
+import { Table, StringTable } from "./Transactions.styled";
 
 export const Transactions = ({ events }) => {
   return (
-    <table className={css.transactionHistory}>
+    <Table>
       <thead>
         <tr>
           <th>Type</th>
@@ -15,14 +15,14 @@ export const Transactions = ({ events }) => {
 
       <tbody>
         {events.map(({ id, type, amount, currency }) => (
-          <tr key={id}>
+          <StringTable key={id}>
             <td>{type}</td>
             <td>{amount}</td>
             <td>{currency}</td>
-          </tr>
+          </StringTable>
         ))}
       </tbody>
-    </table>
+    </Table>
   );
 };
 

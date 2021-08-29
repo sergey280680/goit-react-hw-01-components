@@ -1,11 +1,10 @@
 import PropTypes from "prop-types";
 import { UserCard } from "components/UserCard/UserCard";
-import css from "./UserBoard.module.css";
+import { BoardUser } from "./UserBoard.styled";
 
-// export const UserBoard = ({ event }) => {
 export const UserBoard = ({ event }) => {
   return (
-    <div className={css.userBoard}>
+    <BoardUser>
       <UserCard
         name={event.name}
         tag={event.tag}
@@ -15,7 +14,7 @@ export const UserBoard = ({ event }) => {
         views={event.stats.views}
         likes={event.stats.likes}
       />
-    </div>
+    </BoardUser>
   );
 };
 
