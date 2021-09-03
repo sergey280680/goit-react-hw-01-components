@@ -12,7 +12,7 @@ export const FriendCard = ({ avatar, name, isOnline }) => {
 };
 
 FriendCard.propTypes = {
-  avatar: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  isOnline: PropTypes.bool.isRequired,
+  avatar: PropTypes.string,
+  name: PropTypes.string,
+  isOnline: PropTypes.bool,
 };

@@ -1,18 +1,25 @@
 import PropTypes from "prop-types";
-import { UserCard } from "components/UserCard/UserCard";
+import { UserCard } from "components/UserBoard/UserCard/UserCard";
 import { BoardUser } from "./UserBoard.styled";
 
 export const UserBoard = ({ event }) => {
+  const {
+    name,
+    tag,
+    location,
+    avatar,
+    stats: { followers, views, likes },
+  } = event;
   return (
     <BoardUser>
       <UserCard
-        name={event.name}
-        tag={event.tag}
-        location={event.location}
-        avatar={event.avatar}
-        followers={event.stats.followers}
-        views={event.stats.views}
-        likes={event.stats.likes}
+        name={name}
+        tag={tag}
+        location={location}
+        avatar={avatar}
+        followers={followers}
+        views={views}
+        likes={likes}
       />
     </BoardUser>
   );
@@ -20,14 +27,14 @@ export const UserBoard = ({ event }) => {
 
 UserBoard.propTypes = {
   event: PropTypes.exact({
-    name: PropTypes.string.isRequired,
-    tag: PropTypes.string.isRequired,
-    location: PropTypes.string.isRequired,
-    avatar: PropTypes.string.isRequired,
+    name: PropTypes.string,
+    tag: PropTypes.string,
+    location: PropTypes.string,
+    avatar: PropTypes.string,
     stats: PropTypes.exact({
-      followers: PropTypes.number.isRequired,
-      views: PropTypes.number.isRequired,
-      likes: PropTypes.number.isRequired,
+      followers: PropTypes.number,
+      views: PropTypes.number,
+      likes: PropTypes.number,
     }),
   }),
 };

@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { FriendCard } from "components/FriendCard/FriendCard";
+import { FriendCard } from "components/FriendsBoard/FriendCard/FriendCard";
 import { BoardList } from "./FriendsBoard.styled";
 
 export const FriendsBoard = ({ events }) => {

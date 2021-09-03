@@ -1,4 +1,4 @@
-import { randomColor } from "components/utils";
+import { randomColor } from "utils";
 import PropTypes from "prop-types";
 import {
   StatisticsList,
@@ -25,7 +25,7 @@ export const Statistics = ({ title, items }) => {
 };
 
 Statistics.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   items: PropTypes.arrayOf(
     PropTypes.exact({
       id: PropTypes.string.isRequired,
